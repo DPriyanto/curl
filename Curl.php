@@ -1,5 +1,5 @@
 <?php
-namespace DedyCo\Curl;
+namespace DPriyanto\Curl;
 
 class Curl
 {
@@ -42,13 +42,21 @@ class Curl
 
     public $fp;
 
+    function __construct() {
+        $this->ch = curl_init();
+    }
+    
+    function set($key, $val) {
+        curl_setopt($this->ch, $key, $val);
+    }
+    
     function exec()
     {
         if ($this->file != '') {
             $this->fp = fopen($this->file, 'w+');
         }
         
-        $this->ch = curl_init();
+        //$this->ch = curl_init();
         
         curl_setopt($this->ch, CURLOPT_URL, $this->url);
         
@@ -77,7 +85,7 @@ class Curl
             } else {
                 $this->post_string = http_build_query($this->posts, '', '&');
             }
-            
+            //pr($this->post_string);
             curl_setopt($this->ch, CURLOPT_POST, 1);
             curl_setopt($this->ch, CURLOPT_POSTFIELDS, $this->post_string);
         }
