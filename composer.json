@@ -1,4 +1,10 @@
 {
     "name": "dpriyanto/curl",
     "version": "1.0.0",
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "https://github.com/DPriyanto/curl"
+        }
+    ],
 }
