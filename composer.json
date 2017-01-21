@@ -1,6 +1,5 @@
 {
     "name": "dpriyanto/curl",
-    //"version": "1.0.0",
     "type": "library",
     "description": "description",
     "keywords": ["key","words"],
