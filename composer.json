@@ -1,6 +1,23 @@
 {
     "name": "dpriyanto/curl",
     "version": "1.0.0",
+    "type": "library",
+    "description": "description",
+    "keywords": ["key","words"],
+    "homepage": "https://github.com/DPriyanto/curl",
+    "license": "",
+    "authors": [
+        {
+            "name": "Dedy Priyanto",
+            "homepage": "http://priyanto.com",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-0": {
+            "Monolog": "src"
+        }
+    },
     "repositories": [
         {
             "type": "vcs",
